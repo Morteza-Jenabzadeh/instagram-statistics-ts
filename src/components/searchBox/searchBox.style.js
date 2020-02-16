@@ -25,7 +25,7 @@ export const useStyles = makeStyles(theme => ({
 
         '& div': {
             backgroundColor: "white !important",
-
+            margin: "0 !important"
         }
         // height: "51px"
     },
