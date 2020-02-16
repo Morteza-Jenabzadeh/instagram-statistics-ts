@@ -8,14 +8,11 @@ import AccountInfo from "./components/accountInfo";
 import EngagementChart from "./components/engagementRate/index";
 import LastPosts from './components/lastPosts';
 import Footer from "./components/footer";
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
+import Snackbar from "./components/snackbar";
 
 
 
-function Alert(props: AlertProps) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+
 
 function App() {
   interface IUser {
@@ -63,11 +60,7 @@ function App() {
         post={user && user.edge_owner_to_timeline_media} />
       <EngagementChart dataSource={user && user.edge_owner_to_timeline_media} />
       <LastPosts dataSource={user && user.edge_owner_to_timeline_media} />
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }} >
-        <Alert onClose={handleClose} severity="error">
-          This account is private!
-        </Alert>
-      </Snackbar>
+      <Snackbar open={open} handleClose={handleClose} />
       <Footer />
     </div>
   );
