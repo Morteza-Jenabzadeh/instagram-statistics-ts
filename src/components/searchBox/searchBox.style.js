@@ -41,6 +41,17 @@ export const useStyles = makeStyles(theme => ({
         fontWeight: "500",
         fontSize: "40px",
         lineHeight: "26px"
-    }
+    },
+    large: {
+        width: theme.spacing(7),
+        height: theme.spacing(7),
+    },
+    option: {
+        fontSize: 15,
+        '& > span': {
+            marginRight: 10,
+            fontSize: 18,
+        },
+    },
 
 }));
