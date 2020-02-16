@@ -59,7 +59,7 @@ const SearchBox: React.FC<IProps> = (Props) => {
                 onChange={onChange2}
                 loading={loading2}
                 disableClearable
-                style={{ width: 800 }}
+                style={{ width: 600 }}
                 options={userList}
                 getOptionLabel={option => option?.username}
                 renderOption={option => (
