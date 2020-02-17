@@ -2,6 +2,8 @@
 import React from "react";
 import { useStyles } from "./engagement.style";
 import Grid from "@material-ui/core/Grid";
+import ImageLoader from 'react-load-image';
+import Spinner from "../spinnerLoader";
 
 interface IProp {
     url: string;
@@ -19,7 +21,14 @@ const Card: React.FC<IProp> = (props) => {
 
         <Grid container item xs={2} alignItems="center" direction="column"
             justify="space-around" className={classes.card}>
-            <img src={url} alt="url" width="200px" height="250px" className={classes.img} />
+            {/* <img src={url} alt="url" width="200px" height="250px" className={classes.img} /> */}
+            <ImageLoader
+                src={url} alt="profileApi" className={classes.img}
+            >
+                <img />
+                <div>Error!</div>
+                <Spinner />
+            </ImageLoader>
             <Grid container className={classes.likeWrapper} >
                 <Grid item xs container direction="column" alignItems="center">
                     <span>

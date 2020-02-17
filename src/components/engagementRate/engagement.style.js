@@ -16,6 +16,14 @@ export const useStyles = makeStyles(theme => ({
     img: {
         // padding: "10px",
         background: "white",
+        '& img': {
+
+            height: "250px",
+            maxWidth: "200px !important",
+            maxHeight: "250px !important",
+            width: "250px",
+        },
+
     },
     headTitle: {
 

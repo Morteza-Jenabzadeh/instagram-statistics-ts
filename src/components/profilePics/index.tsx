@@ -39,7 +39,6 @@ const Bio: React.FC<IProp> = (props) => {
                     <div>Error!</div>
                     <Spinner />
                 </ImageLoader>
-                {/* <img src={profileApi} alt="profileApi" className={classes.mainPic} /> */}
                 <h2 style={{ marginTop: "130px" }}>{name}</h2>
                 <span style={{ marginTop: "0px" }}>@{userName}</span>
             </Grid>
