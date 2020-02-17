@@ -4,7 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme => ({
     mainPic: {
         maxWidth: "328px",
-        maxheight: "328px",
+        minWidth: "328px",
+        maxHeight: "328px",
+        minHeight: "328px",
         borderRadius: "24px",
         background: "linear-gradient(to top, #37c0c9, #fff)",
         padding: "5px",
