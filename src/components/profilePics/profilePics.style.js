@@ -12,7 +12,10 @@ export const useStyles = makeStyles(theme => ({
         padding: "5px",
         zIndex: 2,
         position: "absolute",
-        top: '256px'
+        top: '256px',
+        display: 'flex',
+        justifyContent: "center",
+        alignItems: "center"
     },
     wrapper: {
         position: "relative",

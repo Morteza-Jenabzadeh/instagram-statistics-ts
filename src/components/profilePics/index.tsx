@@ -3,7 +3,8 @@ import React from 'react';
 import Grid from "@material-ui/core/Grid";
 import { useStyles } from "./profilePics.style";
 import StaticHints from "../staticHints";
-
+import ImageLoader from 'react-load-image';
+import image from "../../assets/spinner.gif"
 interface IProp {
     dataSource: { [key: string]: any },
     profileApi: string;
@@ -12,7 +13,9 @@ interface IProp {
 
 }
 
-
+function Preloader() {
+    return <img src={image} />;
+}
 const Bio: React.FC<IProp> = (props) => {
     const { profileApi, name, userName, dataSource } = props;
     const classes = useStyles();
@@ -28,8 +31,18 @@ const Bio: React.FC<IProp> = (props) => {
                     {edges.slice(0, 3).map((item: any, index: number) => (
                         <img key={index} src={item.node.display_url} alt="profileApi" className={classes.backgroundPic} />
                     ))}
+
                 </Grid>
-                <img src={profileApi} alt="profileApi" className={classes.mainPic} />
+
+
+                <ImageLoader
+                    src={profileApi} alt="profileApi" className={classes.mainPic}
+                >
+                    <img />
+                    <div>Error!</div>
+                    <Preloader />
+                </ImageLoader>
+                {/* <img src={profileApi} alt="profileApi" className={classes.mainPic} /> */}
                 <h2 style={{ marginTop: "100px" }}>{name}</h2>
                 <span style={{ marginTop: "0px" }}>@{userName}</span>
             </Grid>
