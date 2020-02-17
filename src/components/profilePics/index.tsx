@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { useStyles } from "./profilePics.style";
 import StaticHints from "../staticHints";
 import ImageLoader from 'react-load-image';
-import image from "../../assets/spinner.gif"
+import Spinner from "../spinnerLoader";
 interface IProp {
     dataSource: { [key: string]: any },
     profileApi: string;
@@ -13,9 +13,6 @@ interface IProp {
 
 }
 
-function Preloader() {
-    return <img src={image} />;
-}
 const Bio: React.FC<IProp> = (props) => {
     const { profileApi, name, userName, dataSource } = props;
     const classes = useStyles();
@@ -40,10 +37,10 @@ const Bio: React.FC<IProp> = (props) => {
                 >
                     <img />
                     <div>Error!</div>
-                    <Preloader />
+                    <Spinner />
                 </ImageLoader>
                 {/* <img src={profileApi} alt="profileApi" className={classes.mainPic} /> */}
-                <h2 style={{ marginTop: "100px" }}>{name}</h2>
+                <h2 style={{ marginTop: "130px" }}>{name}</h2>
                 <span style={{ marginTop: "0px" }}>@{userName}</span>
             </Grid>
             <Grid container className={classes.info}>
