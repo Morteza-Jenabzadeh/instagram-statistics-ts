@@ -39,8 +39,8 @@ const Bio: React.FC<IProp> = (props) => {
                     <div>Error!</div>
                     <Spinner />
                 </ImageLoader>
-                <h2 style={{ marginTop: "130px" }}>{name}</h2>
-                <span style={{ marginTop: "0px" }}>@{userName}</span>
+                <h2 style={{ position: "absolute", bottom: "30px" }}>{name}</h2>
+                <span style={{ position: "absolute", bottom: "10px" }}>@{userName}</span>
             </Grid>
             <Grid container className={classes.info}>
                 <Grid container direction="column" alignItems="center" justify="center" item xs className={classes.separator}>
