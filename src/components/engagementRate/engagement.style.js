@@ -40,8 +40,7 @@ export const useStyles = makeStyles(theme => ({
         // borderRadius: "5px",
         height: "310px",
         minWidth: "230px"
-        // padding: "10px",
-        // margin: "30px"
+
     },
     likeWrapper: {
         ' & span': {
@@ -64,18 +63,5 @@ export const useStyles = makeStyles(theme => ({
         height: "40px",
     },
 
-    // box: {
-
-    //     height: "60px",
-    //     width: "175px",
-    //     border: "1px solid #677899",
-    //     '& span': {
-    //         fontWeight: "500",
-    //         fontSize: "16px",
-    //         color: "#32618a",
-    //         textAlign: 'center',
-    //         lineHeight: "19px"
-    //     }
-    // }
 
 }));

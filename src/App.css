@@ -7,3 +7,6 @@ body {
     font-family: 'Rubik', Montserrat;
     margin-bottom: 100px;
   }
+  *{
+    margin:0
+  }

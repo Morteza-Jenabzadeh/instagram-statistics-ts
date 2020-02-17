@@ -122,7 +122,7 @@ const EngagementRate: React.FC<IProp> = (prop) => {
 
   return (
     <>
-      <Grid container direction="column" justify="center" alignItems="center" spacing={2}
+      <Grid container direction="column" justify="center" alignItems="center"
         className={classes.engagementWrapper}
       >
         <h2 className={classes.headTitle}>EngagementRate</h2>
