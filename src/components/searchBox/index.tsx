@@ -27,7 +27,6 @@ const SearchBox: React.FC<IProps> = (Props) => {
     const { title, submit, placeholder, loading = true } = Props;
     const [query, setQuery] = useState();
     const [loading2, setLoading] = useState(false);
-
     const [userList, setUserList] = useState<IUsers[]>([]);
     const classes = useStyles();
     const onChange2 = async (event: any, value: any) => {
@@ -65,7 +64,9 @@ const SearchBox: React.FC<IProps> = (Props) => {
                 renderOption={option => (
                     <React.Fragment>
                         <Avatar src={option.profile_pic} />
-                        {option?.username}
+                        <div style={{ paddingLeft: '10px' }}>
+                            {option?.username}
+                        </div>
 
                     </React.Fragment>
                 )}
