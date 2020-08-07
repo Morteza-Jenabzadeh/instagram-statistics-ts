@@ -43,8 +43,8 @@ const EngagementRate: React.FC<IProp> = (prop) => {
     } else {
       setState({
         ...state,
-        top: tooltip.caretY - 400,
-        left: tooltip.caretX + 50,
+        top: tooltip.caretY - 600,
+        left: tooltip.caretX + 30,
         data: "payload.date",
         showTooltip: true,
         node: tooltip.dataPoints[0].index,
