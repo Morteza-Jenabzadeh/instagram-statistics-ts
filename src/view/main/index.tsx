@@ -18,7 +18,6 @@ const Main = () => {
 
     setOpen(false);
   };
-  console.log(user);
   const SubmitRequest = async (userId: string) => {
     setLoading(true);
     const data = await axios.get(`https://www.instagram.com/${userId}/?__a=1`);
@@ -42,17 +41,17 @@ const Main = () => {
 
       <ProfilePic
         profileApi={user?.profile_pic_url_hd}
-        name={user && user.full_name}
-        userName={user && user.username}
+        name={user?.full_name}
+        userName={user?.username}
         dataSource={user?.edge_owner_to_timeline_media}
       />
       <AccountInfo
-        followers={user && user.edge_followed_by}
-        following={user && user.edge_follow}
-        post={user && user.edge_owner_to_timeline_media}
+        followers={user?.edge_followed_by}
+        following={user?.edge_follow}
+        post={user?.edge_owner_to_timeline_media}
       />
-      <EngagementChart dataSource={user && user.edge_owner_to_timeline_media} />
-      <LastPosts dataSource={user && user.edge_owner_to_timeline_media} />
+      <EngagementChart dataSource={user?.edge_owner_to_timeline_media} />
+      <LastPosts dataSource={user?.edge_owner_to_timeline_media} />
       <Snackbar open={open} handleClose={handleClose} />
     </div>
   );
