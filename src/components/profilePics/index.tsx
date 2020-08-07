@@ -1,7 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { useStyles } from "./profilePics.style";
-import StaticHints from "../staticHints";
 import ImageLoader from "react-load-image";
 import Spinner from "../spinnerLoader";
 interface IProp {

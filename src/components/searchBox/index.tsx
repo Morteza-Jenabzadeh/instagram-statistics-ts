@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-import { useStyles } from "./searchBox.style";
+import { useStyles } from "./searchBoxStyle";
 import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Autocomplete from "@material-ui/lab/Autocomplete";
@@ -36,14 +36,13 @@ const SearchBox: React.FC<IProps> = (Props) => {
       const data: any = await axios.get(
         `https://www.instagram.com/web/search/topsearch/?query=${value}`
       );
-      const modified = data?.data?.users?.map((item: any) => {
-        return Object.assign(
-          {},
-          { position: item.position },
-          { username: item.user.username },
-          { profile_pic: item.user.profile_pic_url }
-        );
-      });
+
+      const modified = data?.data?.users?.map((item: any) => ({
+        position: item.position,
+        username: item.user.username,
+        profile_pic: item.user.profile_pic_url,
+      }));
+
       setUserList(modified);
       setLoading(false);
     }
