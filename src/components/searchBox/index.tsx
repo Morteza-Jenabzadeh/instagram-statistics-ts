@@ -36,7 +36,7 @@ const SearchBox: React.FC<IProps> = (Props) => {
       const data: any = await axios.get(
         `https://www.instagram.com/web/search/topsearch/?query=${value}`
       );
-      const modified = data?.data?.users.map((item: any) => {
+      const modified = data?.data?.users?.map((item: any) => {
         return Object.assign(
           {},
           { position: item.position },

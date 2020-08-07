@@ -3,13 +3,15 @@ import "./App.css";
 import Header from "./view/header";
 import Main from "./view/main";
 import Footer from "./view/footer";
-
+import { UserProvider } from "./store/UserContext";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <UserProvider>
+        <Header />
+        <Main />
+        <Footer />
+      </UserProvider>
     </div>
   );
 }
